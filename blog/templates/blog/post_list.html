@@ -7,18 +7,13 @@
             <h1><a href="/">Курилка!</a></h1>
         </div>
         
-        <div>
-        	<h2><a href=""></a></h2>
-    	</div>
+        {% for post in posts %}
+            <div>
+                <h1><a href="">{{ post.title }}</a></h1>
+                <p>{{ post.text|linebreaksbr }}</p>
+                <p>Опубликовано: {{ post.published_date }}</p>
+            </div>
+        {% endfor %}
 
-        <div>
-            <h2><a href="">Как мой друг ходил на свидание</a></h2>
-            <p>Он остался доволен :)</p>
-        </div>
-
-        <div>
-        	<h2><a href="">Как мы смотрели как наш друг чистил двор от снега :))</a></h2>
-            <p>Можно смотреть на это бескочно ЫЫЫ</p>
-        </div>
     </body>
 </html>
